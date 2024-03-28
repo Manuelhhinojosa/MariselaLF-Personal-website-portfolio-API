@@ -35,6 +35,7 @@ const onePost = async (req, res) => {
 const createPost = async (req, res) => {
   const data = req.body;
   const newPost = await new Post({
+    reference: data.reference,
     user: data.user,
     title: data.title,
     text: data.text,
